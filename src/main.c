@@ -15,7 +15,7 @@ void reset_terminal_to_default_color();
 
 int main()
 {
-	(void) setlocale(LC_CTYPE, "");
+    (void) setlocale(LC_CTYPE, "");
 
     wchar_t *s = L"Hello, world!!!";
 
@@ -25,8 +25,8 @@ int main()
     }
 
     reset_terminal_to_default_color();
-    
-	return 0;
+
+    return 0;
 }
 
 void change_terminal_color(uint8_t color)
@@ -34,8 +34,7 @@ void change_terminal_color(uint8_t color)
     wprintf(COLOR_256, color);
 }
 
-void reset_terminal_to_default_color() 
+void reset_terminal_to_default_color()
 {
     wprintf(L"%ls", COLOR_RESET_TO_DEFAULT);
 }
-
